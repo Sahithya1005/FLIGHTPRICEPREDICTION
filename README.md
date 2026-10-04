@@ -20,17 +20,17 @@ The model learns the relationship between flight features and ticket prices and 
 
 4. ALGORITHMS USED
 
-Linear Regression
-
-KNeighborsRegressor
-
-DecisionTreeRegressor
-
-RandomForestRegressor
-
-GradientBoostingRegressor
-
-XGBRegressor
+ • Linear Regression
+ 
+ • KNeighborsRegressor
+ 
+ • DecisionTreeRegressor
+ 
+ • RandomForestRegressor
+ 
+ • GradientBoostingRegressor
+ 
+ • XGBRegressor
 
 5. DATASET FEATURES
 
