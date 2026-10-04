@@ -122,29 +122,29 @@ Feature Engineering is performed to convert the available data into useful featu
 
 The following features can be created:
 
-Journey Day
+ • Journey Day
 
-Journey Month
+ • Journey Month
 
-Departure Hour
+ • Departure Hour
 
-Departure Minute
+ • Departure Minute
 
-Arrival Hour
+ • Arrival Hour
 
-Arrival Minute
+ • Arrival Minute
 
-Duration Hours
+ • Duration Hours
 
-Duration Minutes
+ • Duration Minutes
 
-Total Stops
+ • Total Stops
 
-Encoded Airline
+ • Encoded Airline
 
-Encoded Source
+ • Encoded Source
 
-Encoded Destination
+ • Encoded Destination
 
 10. OUTLIER ANALYSIS
 
@@ -239,21 +239,21 @@ The saved model can then be used to predict flight prices for new flight details
 
 The user can provide:
 
-Airline
+ • Airline
 
-Date of Journey
+ • Date of Journey
 
-Source
+ • Source
 
-Destination
+ • Destination
 
-Departure Time
+ • Departure Time
 
-Arrival Time
+ • Arrival Time
 
-Duration
+ • Duration
 
-Total Stops
+ • Total Stops
 
 Additional Information
 
