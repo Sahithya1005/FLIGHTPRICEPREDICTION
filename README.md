@@ -1,184 +1,276 @@
-✈️ Flight Price Prediction – Machine Learning Project
-1. Domain Overview
+✈️Flight Price Prediction Data Science Project🌐
 
-Domain: Travel / Aviation
+1. DOMAIN OVERVIEW
 
-Problem Statement:
-The objective of this project is to build a machine learning model that predicts flight ticket prices based on factors such as airline, source, destination, journey date, departure time, arrival time, duration, and number of stops.
+DOMAIN: Travel / Aviation
 
-2. Type of Machine Learning Problem
+Flight Price Prediction is a Machine Learning project that predicts the price of flight tickets based on different factors such as airline, source, destination, journey date, departure time, arrival time, duration, and number of stops.
+
+2. PROBLEM STATEMENT
+
+The main objective of this project is to develop a Machine Learning model that can predict flight ticket prices based on the available flight details.
+
+The project also helps to analyze how airline, route, journey date, duration, and number of stops affect flight ticket prices.
+
+3. TYPE OF MACHINE LEARNING PROBLEM
 
 This is a Regression problem because the target variable, Price, is a continuous numerical value.
 
-Algorithms Used
+The model learns the relationship between flight features and ticket prices and predicts the expected price for a new flight.
+
+4. ALGORITHMS USED
+
 Linear Regression
+
 KNeighborsRegressor
+
 DecisionTreeRegressor
+
 RandomForestRegressor
+
 GradientBoostingRegressor
-XGBRegressor
-3. Project Tasks
-Task 1 – Data Analysis
 
-Perform data preprocessing and Exploratory Data Analysis (EDA) to understand the dataset and identify important pricing patterns.
-
-Task 2 – Predictive Model
-
-Build and compare different regression models to predict flight ticket prices.
-
-Task 3 – Business Analysis
-
-Answer the following questions:
-
-Which airlines have the highest and lowest average prices?
-How do stops, journey date, and flight duration affect prices?
-Which source-destination routes have the highest and lowest average prices?
-4. Introduction
-
-The Flight Price Prediction dataset contains information about different flight journeys and their corresponding ticket prices. It includes airline, source, destination, journey date, departure time, arrival time, duration, stops, and additional information.
-
-The main objective is to understand the factors affecting flight prices and develop a machine learning model that can predict ticket prices for new flight details.
-
-5. Dataset Features
-Feature	Description
-Airline	Name of the airline
-Date of Journey	Scheduled travel date
-Source	Starting city/airport
-Destination	Destination city/airport
-Route	Complete flight route
-Dep Time	Departure time
-Arrival Time	Arrival time
-Duration	Total journey duration
-Total Stops	Number of stops/layovers
-Additional Info	Additional flight information
-Price	Flight ticket price – Target
-6. Data Preprocessing
-Missing Values
-
-The dataset was checked for null values. Where necessary, missing categorical values can be handled using mode and numerical values using mean or median.
-
-Duplicate Values
-
-Duplicate records and inconsistent data were checked and removed where required.
-
-Feature Engineering
-
-Date and time features were converted into useful numerical features.
-
-Day
-Month
-Year
-Departure hour
-Departure minute
-Arrival hour
-Arrival minute
-Duration in minutes
-Categorical Encoding
-
-Categorical features such as Airline, Source, Destination and other relevant columns were converted into numerical form using encoding techniques such as One Hot Encoding.
-
-7. Exploratory Data Analysis
-
-EDA was performed to understand the relationship between flight characteristics and ticket prices.
-
-The analysis included:
-
-Airline-wise price comparison
-Source and destination analysis
-Route-wise price analysis
-Number of stops vs price
-Duration vs price
-Journey date/month vs price
-Distribution of flight prices
-Correlation analysis
-
-Both univariate and bivariate analysis were performed using statistical methods and visualizations.
-
-8. Outlier Analysis
-
-Outliers were identified using box plots and statistical techniques.
-
-High-priced flights were carefully analyzed because they may represent genuine premium flights or specific routes. Therefore, valid observations were not automatically removed.
-
-9. Feature Selection and Scaling
-
-Important features were selected based on their relationship with the target variable and their usefulness for prediction.
-
-Feature scaling was considered for algorithms such as KNN, where differences in feature ranges can affect model performance.
-
-10. Model Building
-
-The following regression models were trained:
-
-. Linear Regression
-. KNeighborsRegressor
-DecisionTreeRegressor
-RandomForestRegressor
-GradientBoostingRegressor
 XGBRegressor
 
-The models were evaluated using:
+5. DATASET FEATURES
+
+| Feature         | Data Type     | Example Value | Description                                           |
+| --------------- | ------------- | ------------- | ----------------------------------------------------- |
+| Airline         | Categorical   | IndiGo        | Name of the airline operating the flight.             |
+| Date of Journey | Date          | 24/03/2019    | Date on which the journey takes place.                |
+| Source          | Categorical   | Delhi         | City or location from where the flight starts.        |
+| Destination     | Categorical   | Cochin        | City or location where the flight arrives.            |
+| Route           | Categorical   | DEL → COK     | Complete route followed by the flight.                |
+| Dep Time        | Time          | 10:00         | Departure time of the flight.                         |
+| Arrival Time    | Time          | 13:15         | Arrival time of the flight.                           |
+| Duration        | String / Time | 2h 50m        | Total duration of the flight journey.                 |
+| Total Stops     | Integer       | 1             | Number of stops between the source and destination.   |
+| Additional Info | Categorical   | No info       | Additional information about the flight.              |
+| Price           | Integer       | 5000          | Target variable representing the flight ticket price. |
+
+6. DATA PREPROCESSING
+
+The dataset is checked and prepared before applying Machine Learning algorithms.
+
+The following preprocessing steps are performed:
+
+1. Check for missing values.
+
+2. Remove duplicate records if required.
+
+3. Handle incorrect or inconsistent values.
+
+4. Convert date and time features into useful numerical features.
+
+5. Extract day and month from Date of Journey.
+
+6. Convert Duration into numerical values.
+
+7. Encode categorical features.
+
+8. Separate input features and target variable.
+
+9. Apply feature scaling where required.
+
+10. Split the dataset into training and testing data.
+
+11. EXPLORATORY DATA ANALYSIS
+
+Exploratory Data Analysis is performed to understand the dataset and identify important patterns.
+
+The following analysis can be performed:
+
+1. Analyze flight prices for different airlines.
+
+2. Compare average prices between airlines.
+
+3. Analyze the effect of number of stops on price.
+
+4. Analyze flight prices based on source and destination.
+
+5. Analyze the relationship between duration and price.
+
+6. Analyze the effect of journey date on price.
+
+7. Study the distribution of flight prices.
+
+8. Analyze correlations between numerical features.
+
+9. DATA VISUALIZATION
+
+Different plots can be used to understand the dataset visually.
+
+1. Airline vs Average Price
+
+2. Source vs Average Price
+
+3. Destination vs Average Price
+
+4. Total Stops vs Price
+
+5. Duration vs Price
+
+6. Price Distribution
+
+7. Correlation Heatmap
+
+8. Journey Date vs Price
+
+9. FEATURE ENGINEERING
+
+Feature Engineering is performed to convert the available data into useful features for Machine Learning.
+
+The following features can be created:
+
+Journey Day
+
+Journey Month
+
+Departure Hour
+
+Departure Minute
+
+Arrival Hour
+
+Arrival Minute
+
+Duration Hours
+
+Duration Minutes
+
+Total Stops
+
+Encoded Airline
+
+Encoded Source
+
+Encoded Destination
+
+10. OUTLIER ANALYSIS
+
+Outliers are identified using statistical methods and visualization techniques.
+
+Box plots can be used to identify unusual values in numerical features such as:
+
+Price
+
+Duration
+
+The effect of outliers is analyzed before building the final model.
+
+11. MODEL COMPARISON
+
+| Model                     | Train R² Score | Test R² Score | MAE    | MSE    | RMSE   |
+| ------------------------- | -------------- | ------------- | ------ | ------ | ------ |
+| Linear Regression         | ______         | ______        | ______ | ______ | ______ |
+| KNeighborsRegressor       | ______         | ______        | ______ | ______ | ______ |
+| DecisionTreeRegressor     | ______         | ______        | ______ | ______ | ______ |
+| RandomForestRegressor     | ______         | ______        | ______ | ______ | ______ |
+| GradientBoostingRegressor | ______         | ______        | ______ | ______ | ______ |
+| XGBRegressor              | ______         | ______        | ______ | ______ | ______ |
+
+NOTE:
+
+Enter the actual values obtained from your Jupyter Notebook in the blank spaces.
+
+12. MODEL EVALUATION
+
+The following evaluation metrics are used to evaluate the regression models:
 
 R² Score
-MAE
-MSE
-RMSE
 
-The model having the best test performance and lower prediction error was selected as the final model.
+Mean Absolute Error (MAE)
 
-11. Model Comparison
-Model	Train R²	Test R²	MAE	MSE	RMSE
-Linear Regression	Actual Value	Actual Value	Actual Value	Actual Value	Actual Value
-KNN Regressor	Actual Value	Actual Value	Actual Value	Actual Value	Actual Value
-Decision Tree	Actual Value	Actual Value	Actual Value	Actual Value	Actual Value
-Random Forest	Actual Value	Actual Value	Actual Value	Actual Value	Actual Value
-Gradient Boosting	Actual Value	Actual Value	Actual Value	Actual Value	Actual Value
-XGBoost	Actual Value	Actual Value	Actual Value	Actual Value	Actual Value
+Mean Squared Error (MSE)
 
-Note: Use the actual values generated from your notebook instead of estimated values.
+Root Mean Squared Error (RMSE)
 
-12. Task 3 – Business Insights
-1. Highest and Lowest Average Flight Prices
+A model with a higher R² score and lower error values generally provides better prediction performance.
 
-Airlines were grouped and their average ticket prices were calculated.
+13. BUSINESS / ANALYTICAL QUESTIONS
 
-Highest average price: To be obtained from the dataset.
-Lowest average price: To be obtained from the dataset.
+The project can be used to answer the following questions:
 
-2. Effect of Stops, Journey Date and Duration
-Flight prices can vary depending on the number of stops.
-Journey date and month can influence ticket prices because of demand and travel periods.
-Flight duration can also affect the price depending on route and airline.
-These relationships were analyzed using appropriate visualizations.
-3. Highest and Lowest Priced Routes
+1. Which airline has the highest average flight price?
 
-Source and destination were combined to create routes. The average price of each route was calculated.
+2. Which airline has the lowest average flight price?
 
-Highest average-price route: To be obtained from the dataset.
-Lowest average-price route: To be obtained from the dataset.
+3. How does the number of stops affect the flight price?
 
-13. Model Deployment
+4. Does flight duration affect the ticket price?
 
-After selecting the best-performing model, the trained model can be saved using Pickle.
+5. Which route has the highest average flight price?
 
-The saved model can later be loaded into a Python or Streamlit application to predict flight prices for new flight details without retraining the model.
+6. Which route has the lowest average flight price?
 
-14. Result Summary
+7. Does the journey date affect flight prices?
 
-Different regression algorithms were compared using R², MAE, MSE and RMSE.
+8. Which features have the strongest relationship with flight price?
 
-The model with the highest test R² score and lowest prediction error can be selected as the final model.
+9. MODEL BUILDING
 
-The project demonstrates how machine learning can be applied to historical flight data to estimate ticket prices and identify important pricing patterns.
+The processed dataset is divided into training and testing datasets.
 
-15. Conclusion
+The training data is used to train different regression models.
 
-The Flight Price Prediction project uses machine learning regression techniques to predict flight ticket prices based on different travel-related features.
+The trained models are then tested using unseen testing data.
 
-Data preprocessing, feature engineering, EDA, encoding, model training, and evaluation were performed. Multiple regression algorithms were compared to identify the most suitable predictive model.
+The performance of all models is compared using R², MAE, MSE, and RMSE.
 
-The project can help travelers, travel agencies, and airline-related businesses understand flight pricing patterns and estimate expected ticket prices.
+15. BEST MODEL SELECTION
 
-⭐ Thank You
+After comparing all the regression models, the model with the best prediction performance is selected as the final model.
 
-End of Project
+The final model is selected based on:
+
+Higher R² Score
+
+Lower MAE
+
+Lower MSE
+
+Lower RMSE
+
+16. MODEL DEPLOYMENT
+
+The selected Machine Learning model can be saved using Pickle.
+
+The saved model can then be used to predict flight prices for new flight details.
+
+The user can provide:
+
+Airline
+
+Date of Journey
+
+Source
+
+Destination
+
+Departure Time
+
+Arrival Time
+
+Duration
+
+Total Stops
+
+Additional Information
+
+The system processes the input and predicts the expected flight price.
+
+17. RESULT
+
+The Flight Price Prediction model predicts flight ticket prices using different flight-related features.
+
+The analysis helps to understand the factors that influence flight prices, including airline, route, duration, journey date, and number of stops.
+
+The best-performing regression model is selected based on the evaluation metrics.
+
+18. CONCLUSION
+
+Flight Price Prediction is a Regression-based Machine Learning project that helps predict the price of flight tickets.
+
+The project includes data preprocessing, feature engineering, exploratory data analysis, visualization, model building, model comparison, and evaluation.
+
+The final model can be used to estimate flight prices for new flight details and understand the major factors affecting ticket prices.
