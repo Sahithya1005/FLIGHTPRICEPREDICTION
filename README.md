@@ -110,8 +110,8 @@ Feature scaling was considered for algorithms such as KNN, where differences in 
 
 The following regression models were trained:
 
-Linear Regression
-KNeighborsRegressor
+. Linear Regression
+. KNeighborsRegressor
 DecisionTreeRegressor
 RandomForestRegressor
 GradientBoostingRegressor
