@@ -180,4 +180,5 @@ Data preprocessing, feature engineering, EDA, encoding, model training, and eval
 The project can help travelers, travel agencies, and airline-related businesses understand flight pricing patterns and estimate expected ticket prices.
 
 ⭐ Thank You
+
 End of Project
