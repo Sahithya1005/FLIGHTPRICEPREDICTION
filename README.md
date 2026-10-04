@@ -274,3 +274,7 @@ Flight Price Prediction is a Regression-based Machine Learning project that help
 The project includes data preprocessing, feature engineering, exploratory data analysis, visualization, model building, model comparison, and evaluation.
 
 The final model can be used to estimate flight prices for new flight details and understand the major factors affecting ticket prices.
+
+THANK YOU
+
+END OF PROJECT
